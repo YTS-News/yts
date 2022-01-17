@@ -45,15 +45,3 @@ function finddatepost(a) {
 }
 var nopage, type, postnumber, lblname1;
 bloggerpage();
-
-if ($('.post-body').height() < 50) {window.location.replace("/");}
-
-$("<style>@media only screen and (max-width:440px){#yst{width:94%;height:90px;}} @media screen and (min-width:441px){#yst{width:320px;height:90px;}} #yst{position:fixed;z-index:999999;left:10px;bottom:10px;background-color:#fff;border:1px solid #999;overflow:hidden;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-khtml-border-radius:4px;transform:translateX(-100%); -webkit-transform:translateX(-100%);} #yst div{position:relative;top:-1px;} #yst div img{min-height:90px;margin-left:0px;} .slide-in{animation:slide-in 0.5s forwards;-webkit-animation:slide-in 0.5s forwards;} .slide-out{animation:slide-out 0.5s forwards;-webkit-animation:slide-out 0.5s forwards;} @keyframes slide-in{100%{transform:translateX(0%);}} @-webkit-keyframes slide-in{100%{-webkit-transform:translateX(0%);}} @keyframes slide-out{0%{transform:translateX(0%);} 100%{transform:translateX(-100%);}} @-webkit-keyframes slide-out{0%{-webkit-transform:translateX(0%);} 100%{-webkit-transform:translateX(-100%);}} #close:hover{opacity:0.7;} #close{position:absolute;z-index:9999999999;color:#FF7F50;font-size:11px;height:8px;width:10px;float:right;right:5px;top:2px;cursor:pointer;}</style>" ).appendTo("head");
- 
-$("body").append('<div id="yst" class="slide-in"><span id="close">❎</span><div><a href="http://www.dynadot.com?s6dYr7W9Fb9L6e" title="dynadot" target="_blank"><img src="https://i.imgur.com/nwDJMBg.jpg" title="dynadot" alt="dynadot" width="auto" height="auto" loading="lazy"></a></div></div>');
- 
-window.onload = function(){document.getElementById('close').onclick = function(){setTimeout(function(){var list = document.getElementById("yst"); list.parentNode.removeChild(list);},500); return false;};};
- 
-var $slider = document.getElementById('yst');
-var $toggle = document.getElementById('close');
-$toggle.addEventListener('click', function() {var isOpen = $slider.classList.contains('slide-in'); $slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');});
